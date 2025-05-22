@@ -19,3 +19,11 @@ In this case, the client and server are using different ports—the server liste
 To resolve this, the client's code should be updated to match the server's port by changing the line to:
 ClientBuilder::from_uri(Uri::from_static("ws://127.0.0.1:8080")).
 Both sides use the ws:// scheme, indicating that the communication is happening over WebSocket.
+
+> Small changes
+
+![Changes](img/ss9.png)
+![Changes](img/ss10.png)
+![Changes](img/ss11.png)
+![Changes](img/ss12.png)
+In my version, I formatted the messages on both the server and client to include the sender’s IP address and port in the format ({addr} : {text}), and added custom prefixes like “From server” and “Thata’s Computer.” This allows each message to clearly show its origin, making it easier to identify which client sent it.
